@@ -23,7 +23,6 @@ fio_taxa exports one function: ``fio_taxa.classify()``.
     >>> from fio_taxa import classify
     >>> src = open('tests/data/trio.geojson')
     >>> collection = json.loads(src.read())
-    >>> collection = json.loads(src.read())
     >>> for taxon in classify(collection['features']):
     ...     print(taxon)
     ...
