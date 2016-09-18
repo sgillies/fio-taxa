@@ -23,3 +23,11 @@ script:
   - python -m pytest --cov fio_taxa --cov-report term-missing
 after_success:
   - coveralls
+deploy:
+  on:
+    tags: true
+  provider: pypi
+  distributions: "sdist bdist_wheel"
+  user: seang
+  password:
+    secure: "l6siXvmskhMJuPnuVvgUePMwwRo59VC9IltOgU8qPh/C3ebEMBBh6NYL6ESdyxH1hTiOJmRqk+XYPsKapEnJVtZN4RwrWFez84gpXP4Epw1QqG81E/65Ynrj1vdr+4qhfgWDkp5hrX1VtGpk8+qb6oxLv2gx9TKS/F9zE6APHzHwRY1Kb7Bxd5xKXk9GF6jWK0ZF9RYxdPhnc4j/LqcpowBxBYxakjf1wDB1/9PgZPQS646kkio39JBsK9CxbMx6OsNgZMfOdW//AqNv3a/FqCFydV0rlEQQ5xzJ/cwPrmHwnFUY0m7U5RM1cD47MqwKZPZrcBNKtTMdkcxJCn23oRRxTrdfiPhuW01dfQvTOuo4uml8DhMyFjAachrxcojARlN/42nvdPhj7KAK9j/dDFYyG21AFheJAPOWCBobcynL2HG4wKUVT9MmNfrjqORLKMc94tvdE3XuFe+dXT9Rv21f1kKZvI8i6fH5RRA9kGl5f/z1D7vvJJsNgDolk5HjTWdR7LPlDgyoMOeCvz7A7vRXVvLmwTIJ6cVFKNlTqct5MNkoP+q0b2U8ITP5EYHC3i37ymBmZSNEn7BSb7UvrMwXOVjJGAkMRS4N2oI9bJWO8nNWmoRI7m54O2q+XTdtC4PqGUIFEwCjoMYkqEFk9TbUbHx6PCX6Ca5b8zb2+50="
