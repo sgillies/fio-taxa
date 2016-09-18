@@ -1,11 +1,11 @@
 fio_taxa
 ========
 
-.. image:: https://travis-ci.org/sgillies/fio_taxa.svg
-   :target: https://travis-ci.org/sgillies/fio_taxa
+.. image:: https://travis-ci.org/sgillies/fio-taxa.svg
+   :target: https://travis-ci.org/sgillies/fio-taxa
 
-.. image:: https://coveralls.io/repos/sgillies/fio_taxa/badge.png
-   :target: https://coveralls.io/r/sgillies/fio_taxa
+.. image:: https://coveralls.io/repos/sgillies/fio-taxa/badge.png
+   :target: https://coveralls.io/r/sgillies/fio-taxa
 
 fio_taxa classifies GeoJSON features and finds the set of unique
 kinds of features. Uniqueness is determined by geometry type and by the
