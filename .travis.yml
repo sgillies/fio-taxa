@@ -1,0 +1,25 @@
+sudo: false
+language: python
+addons:
+  apt:
+    packages:
+      - libgdal1h
+      - gdal-bin
+      - libgdal-dev
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+cache:
+  directories:
+    - $HOME/.pip-cache/
+    - $HOME/wheelhouse
+install:
+  - "pip install -U pip"
+  - "pip install --find-links=$HOME/wheelhouse -e .[test] --cache-dir $HOME/.pip-cache"
+  - "pip install pytest-cov coveralls"
+script:
+  - python -m pytest --cov fio_taxa --cov-report term-missing
+after_success:
+  - coveralls
