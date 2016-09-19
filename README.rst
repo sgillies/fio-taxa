@@ -8,15 +8,17 @@ fio_taxa
    :target: https://coveralls.io/github/sgillies/fio-taxa?branch=master
 
 
-fio_taxa classifies GeoJSON features and finds the set of unique
-kinds of features. Uniqueness is determined by geometry type and by the
-names and types of values in a Feature's 'properties' member. Members
-foreign to the GeoJSON specification are not considered.
+fio_taxa classifies GeoJSON features.
+
+Given a sequence of Features, fio_taxa finds and returns the set of unique
+kinds of Features in the sequence. Uniqueness is determined by geometry type
+and by the set of names and types of values in a Feature's 'properties' member.
+Members foreign to the GeoJSON specification are not considered.
 
 Usage
 -----
 
-fio_taxa exports one function: ``fio_taxa.classify()``.
+fio_taxa has one function: ``fio_taxa.classify()``.
 
 .. code-block:: python
 
